@@ -5,6 +5,7 @@ Various free hooks for WHMCS.
 
 - [Fix IntoDNS URLs](#fix-intodns-urls)
 - [Prevent spoofing URL for knowledgebase articles](#prevent-spoofing-url-for-knowledgebase-articles)
+- [Force user login](#force-user-login)
 ---
 ### Fix IntoDNS URLs
 IntoDNS removed the DNS records for www.intodns.com. All links to IntoDNS in the WHMCS Admin Area are hardcoded
@@ -25,3 +26,8 @@ This hook prevents that behaviour and will always redirect back to the original 
 
 [🔗 Check the code](hooks/FixKnowledgebaseRedirects.php)
 ___
+### Force user login
+Force the user to login before they are able to access any content on the WHMCS installation. 
+The user will be redirected to the login form unless they are already trying to log in or register an account.
+
+[🔗 Check the code](hooks/ForceUserLogin.php)
