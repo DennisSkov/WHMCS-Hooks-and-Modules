@@ -10,8 +10,8 @@ A collection of free hooks and modules for WHMCS.
 ## List of modules
 
 - [Password Change for WHMCS](#password-change-for-whmcs)
-
 ---
+## WHMCS Hooks
 ### Fix IntoDNS URLs
 IntoDNS removed the DNS records for www.intodns.com. All links to IntoDNS in the WHMCS Admin Area are hardcoded
 with the www subdomain.
@@ -39,10 +39,6 @@ The user will be redirected to the login form unless they are already trying to 
 
 ---
 ## WHMCS Modules
-Free modules for WHMCS
-
----
-
 ### Password Change for WHMCS
 Allows admins to set a specific password for a client account. New password can be sent to the client.
 
