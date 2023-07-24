@@ -1,11 +1,16 @@
-# WHMCS Hooks
-Various free hooks for WHMCS.
+# WHMCS Hooks and Modules
+A collection of free hooks and modules for WHMCS.
 
 ## List of hooks
 
 - [Fix IntoDNS URLs](#fix-intodns-urls)
 - [Prevent spoofing URL for knowledgebase articles](#prevent-spoofing-url-for-knowledgebase-articles)
 - [Force user login](#force-user-login)
+
+## List of modules
+
+- [Password Change for WHMCS](#password-change-for-whmcs)
+
 ---
 ### Fix IntoDNS URLs
 IntoDNS removed the DNS records for www.intodns.com. All links to IntoDNS in the WHMCS Admin Area are hardcoded
@@ -31,3 +36,16 @@ Force the user to login before they are able to access any content on the WHMCS 
 The user will be redirected to the login form unless they are already trying to log in or register an account.
 
 [🔗 Check the code](hooks/ForceUserLogin.php)
+
+---
+## WHMCS Modules
+Free modules for WHMCS
+
+---
+
+### Password Change for WHMCS
+Allows admins to set a specific password for a client account. New password can be sent to the client.
+
+[🔗 Check the code](modules/addons/WHMCSPasswordChange)
+
+---
