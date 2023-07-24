@@ -10,7 +10,7 @@ A collection of free hooks and modules for WHMCS.
 ## List of modules
 
 - [Password Change for WHMCS](#password-change-for-whmcs)
----
+
 ## WHMCS Hooks
 ### Fix IntoDNS URLs
 IntoDNS removed the DNS records for www.intodns.com. All links to IntoDNS in the WHMCS Admin Area are hardcoded
