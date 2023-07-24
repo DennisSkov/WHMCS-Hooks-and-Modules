@@ -13,7 +13,8 @@ use WHMCS\Config\Setting;
 add_hook('ClientAreaPage', 1, function ($vars) {
     $user = new CurrentUser;
     $templateFile = $vars['templatefile'];
-    if(!$user->isAuthenticatedUser() and !$user->isAuthenticatedAdmin() and !in_array($templateFile, ['login', 'dologin', 'password-reset-container', 'register', 'clientarea']))
+    $excludedTemplateFiles = ['login', 'dologin', 'password-reset-container', 'register', 'clientarea', 'user-invite-accept'];
+    if(!$user->isAuthenticatedUser() and !$user->isAuthenticatedAdmin() and !in_array($templateFile, $excludedTemplateFiles))
     {
         $systemURL = Setting::where('setting', 'SystemURL')->first();
         $systemURL = $systemURL->value;
