@@ -33,13 +33,13 @@ function forceRedirect($vars, $page): void
 
     if($vars['kbarticle']['id']){
         $id = $vars['kbarticle']['id'];
-        $friendlyName = $vars['kbarticle']['urlfriendlytitle'].'.html';
+        $friendlyName = urlencode($vars['kbarticle']['urlfriendlytitle'].'.html');
     }elseif($vars['kbcurrentcat']['id']){
         $id = $vars['kbcurrentcat']['id'];
-        $friendlyName = $vars['kbcurrentcat']['urlfriendlyname'];
+        $friendlyName = urlencode($vars['kbcurrentcat']['urlfriendlyname']);
     }elseif(isset($vars['id'])){
         $id = $vars['id'];
-        $friendlyName = $vars['urlfriendlytitle'].'.html';
+        $friendlyName = urlencode($vars['urlfriendlytitle'].'.html');
     }
 
     $trueURL = $vars['systemsslurl'] . $index . $page . '/' . $id . '/' . $friendlyName;
