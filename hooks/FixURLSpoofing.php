@@ -1,5 +1,7 @@
 <?php
 
+use WHMCS\Announcement\Announcement;
+
 /**
  * As long as you leave the ID for the knowledgebase or announcement article in the URL, you can change the URL to whatever you want.
  * e.g.:
@@ -39,8 +41,11 @@ function forceRedirect($vars, $page): void
         $friendlyName = urlencode($vars['kbcurrentcat']['urlfriendlyname']);
     }elseif(isset($vars['id'])){
         $id = $vars['id'];
+        $announcement = Announcement::find($id);
+        $id = ($announcement->parentid > 0) ? $announcement->parentid : $id;
         $friendlyName = urlencode($vars['urlfriendlytitle'].'.html');
     }
+
 
     $trueURL = $vars['systemsslurl'] . $index . $page . '/' . $id . '/' . $friendlyName;
     if($trueURL !== $url and $id !== ''){

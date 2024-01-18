@@ -4,7 +4,7 @@ A collection of free hooks and modules for WHMCS.
 ## List of hooks
 
 - [Fix IntoDNS URLs](#fix-intodns-urls)
-- [Prevent spoofing URL for knowledgebase articles](#prevent-spoofing-url-for-knowledgebase-and-announcement-articles)
+- [Prevent spoofing URL for knowledgebase and announcement articles](#prevent-spoofing-url-for-knowledgebase-and-announcement-articles)
 - [Force user login](#force-user-login)
 
 ## List of modules
